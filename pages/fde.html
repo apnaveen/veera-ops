@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forward Deployed Engineer Syllabus — Multi Cloud DevOps FDE by veera sir NareshIT</title>
+<meta name="description" content="Forward Deployed Engineer syllabus: Python, FastAPI, PostgreSQL, MongoDB, Redis, Generative AI, prompt engineering, RAG, Agentic AI, MCP, Linux, AWS, cloud security, system design, Docker, Kubernetes, Terraform, GitOps and production operations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* ---- FDE page helpers — themed to the site design system ---- */
+.syl-section{scroll-margin-top:96px}
+
+/* phase overview */
+.fde-phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-bottom:26px}
+.fde-phase{position:relative;overflow:hidden;padding:22px 22px 20px;border-radius:20px;
+  background:linear-gradient(170deg,rgba(15,22,42,.85),rgba(7,11,24,.92));
+  border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .28s,border-color .28s,box-shadow .28s}
+.fde-phase::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(180deg,var(--ac),transparent)}
+.fde-phase::after{content:"";position:absolute;top:-40%;right:-30%;width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,var(--ac) 22%,transparent),transparent 70%);pointer-events:none}
+.fde-phase:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--ac) 45%,transparent);
+  box-shadow:0 22px 50px rgba(2,6,18,.6),0 0 50px color-mix(in srgb,var(--ac) 14%,transparent)}
+.fde-phase-ico{font-size:1.5rem;width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:15px;margin-bottom:14px;
+  background:color-mix(in srgb,var(--ac) 12%,transparent);border:1px solid color-mix(in srgb,var(--ac) 35%,transparent);
+  box-shadow:0 0 28px color-mix(in srgb,var(--ac) 20%,transparent)}
+.fde-phase-k{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:1.8px;text-transform:uppercase;color:var(--faint)}
+.fde-phase h3{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-.3px;margin:4px 0 8px;
+  background:linear-gradient(110deg,#fff,var(--ac));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.fde-phase p{font-size:.84rem;color:var(--muted);line-height:1.6}
+
+/* module quick nav */
+.fde-jump{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:0 0 30px}
+.fde-jump a{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:999px;text-decoration:none;
+  font-size:.79rem;font-weight:600;color:var(--muted);background:rgba(9,14,28,.7);border:1px solid var(--border);
+  backdrop-filter:blur(8px);transition:all .25s}
+.fde-jump a:hover{color:#061018;font-weight:800;border-color:transparent;transform:translateY(-3px);
+  background:linear-gradient(120deg,var(--pc),var(--pc2));box-shadow:0 10px 26px color-mix(in srgb,var(--pc) 28%,transparent)}
+.fde-jump a b{font-family:'JetBrains Mono',monospace;font-size:.66rem;opacity:.75}
+
+/* per-module accent: drives timeline, numbers, tags and hovers */
+#m1{--pc:#22d3ee;--pc2:#818cf8}
+#m2{--pc:#38bdf8;--pc2:#6366f1}
+#m3{--pc:#f472b6;--pc2:#a855f7}
+#m4{--pc:#fb7185;--pc2:#c084fc}
+#m5{--pc:#c084fc;--pc2:#6366f1}
+#m6{--pc:#a855f7;--pc2:#22d3ee}
+#m7{--pc:#fbbf24;--pc2:#f97316}
+#m8{--pc:#34d399;--pc2:#22d3ee}
+@media (max-width:600px){
+  .fde-jump a{font-size:.74rem;padding:8px 13px}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+<div class="bg-grid"></div>
+
+<nav class="navbar">
+  <a class="logo" href="../index.html" style="text-decoration:none">Multi Cloud DevOps FDE by veera sir NareshIT</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../index.html" id="nb-home">🏠 Home</a></li>
+    <li><a href="aws.html" id="nb-aws">☁️ AWS</a></li>
+    <li><a href="azure.html" id="nb-azure">🔷 Azure</a></li>
+    <li><a href="gcp.html" id="nb-gcp">🌐 GCP</a></li>
+    <li><a href="devops.html" id="nb-devops">⚙️ DevOps</a></li>
+    <li><a href="fde.html" id="nb-fde" class="nav-active">🎯 FDE</a></li>
+    <li><a href="reviews.html" id="nb-reviews">🌟 Reviews</a></li>
+    <li><a href="projects.html" id="nb-projects" class="nav-cta">🚀 Projects</a></li>
+  </ul>
+  <div class="hamburger" id="ham">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page active" id="page-fde" style="--pc:#22d3ee;--pc2:#818cf8">
+  <div class="syl-hero">
+    <div class="syl-hero-inner">
+      <span class="syl-ico">🎯</span>
+      <h1>Forward Deployed Engineer</h1>
+      <p>Python · Backend · Generative AI · Agentic AI · AWS · Security · DevOps — a complete career track.</p>
+      <div class="syl-stat-chip">
+        <span><b>3</b>Phases</span>
+        <span><b>8</b>Modules</span>
+        <span><b>73</b>Submodules</span>
+      </div>
+    </div>
+  </div>
+<div class="devops-ticker">
+  <div class="ticker-track">
+    <div class="ticker-item">New FDE Batch Starting Soon</div>
+    <div class="ticker-item">New FDE Batch Starting Soon</div>
+    <div class="ticker-item">New FDE Batch Starting Soon</div>
+    <div class="ticker-item">New FDE Batch Starting Soon</div>
+  </div>
+</div>
+<div class="syl-main">
+
+    <!-- Phase overview -->
+    <div class="fde-phases">
+      <div class="fde-phase" style="--ac:#22d3ee">
+        <div class="fde-phase-ico">🧱</div>
+        <div class="fde-phase-k">Phase 1</div>
+        <h3>Engineering Foundation</h3>
+        <p>Production-grade Python, clean architecture, testing and Git — then FastAPI services over PostgreSQL, MongoDB and Redis.</p>
+      </div>
+      <div class="fde-phase" style="--ac:#f472b6">
+        <div class="fde-phase-ico">🤖</div>
+        <div class="fde-phase-k">Phase 2</div>
+        <h3>Generative &amp; Agentic AI</h3>
+        <p>LLM internals, prompt engineering, RAG with vector databases, then agents with MCP tools, memory, planning and guardrails.</p>
+      </div>
+      <div class="fde-phase" style="--ac:#34d399">
+        <div class="fde-phase-ico">🚀</div>
+        <div class="fde-phase-k">Phase 3</div>
+        <h3>Cloud, Security &amp; Production</h3>
+        <p>Linux, AWS, cloud security, system design, Kubernetes, Terraform, GitOps and the observability to run it for a customer.</p>
+      </div>
+    </div>
+
+    <!-- Module quick nav -->
+    <nav class="fde-jump" aria-label="Jump to module">
+      <a href="#m1"><b>01</b> 🐍 Python</a>
+      <a href="#m2"><b>02</b> 🗄️ Backend &amp; DB</a>
+      <a href="#m3"><b>03</b> 🤖 Gen AI</a>
+      <a href="#m4"><b>04</b> ✍️ Prompting</a>
+      <a href="#m5"><b>05</b> 📚 RAG</a>
+      <a href="#m6"><b>06</b> 🕹️ Agentic AI</a>
+      <a href="#m7"><b>07</b> ☁️ AWS &amp; Security</a>
+      <a href="#m8"><b>08</b> ⚙️ DevOps</a>
+    </nav>
+
+    <!-- Module 01 -->
+    <div class="syl-section">
+      <div class="sec-hdr" style="background:linear-gradient(135deg,#22d3ee,#818cf8)">
+        <div class="sec-hdr-ico">🐍</div>
+        <div class="sec-hdr-info"><h2>Module 01 · Python</h2><p>7 submodules</p></div>
+      </div>
+      <div class="timeline">
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">1.1</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">OOP</span><h3 class="tl-topic">Object-Oriented Programming</h3></div><ul class="tl-subs"><li>Classes, objects, instance and class attributes</li><li>Inheritance, composition and method resolution order</li><li>Dunder / magic methods, operator overloading</li><li>Dataclasses, properties, class and static methods</li><li>Abstract base classes and protocols</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">1.2</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">DSA</span><h3 class="tl-topic">Data Structures &amp; Algorithms</h3></div><ul class="tl-subs"><li>Lists, tuples, sets, dictionaries and comprehensions</li><li>Collections module: deque, Counter, defaultdict, namedtuple</li><li>Stacks, queues, linked lists, trees, hash maps</li><li>Searching, sorting, recursion, two-pointer and sliding window</li><li>Time and space complexity (Big-O) analysis</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">1.3</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Robustness</span><h3 class="tl-topic">Error Handling &amp; Type Safety</h3></div><ul class="tl-subs"><li>Exception hierarchy, try / except / else / finally</li><li>Custom exception classes and error contracts</li><li>Type hints, Optional, Union, Generics, TypedDict</li><li>Static checking with mypy</li><li>Logging module and structured log messages</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">1.4</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Testing</span><h3 class="tl-topic">Unit Testing with pytest</h3></div><ul class="tl-subs"><li>Test discovery, assertions and parametrisation</li><li>Fixtures, setup / teardown and conftest.py</li><li>Mocking and monkeypatching external calls</li><li>Coverage measurement and test design</li><li>Test-driven development workflow</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">1.5</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Version Control</span><h3 class="tl-topic">Git &amp; GitHub</h3></div><ul class="tl-subs"><li>Repositories, staging, commits and history</li><li>Branching strategies, merge vs rebase</li><li>Pull requests, code review and conflict resolution</li><li>Tags, releases and .gitignore hygiene</li><li>GitHub Actions basics for running tests on push</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">1.6</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Craft</span><h3 class="tl-topic">Clean Code, Packaging &amp; Environments</h3></div><ul class="tl-subs"><li>PEP 8, naming, docstrings and readability</li><li>Module and package layout, __init__ design</li><li>Virtual environments: venv, pip, requirements</li><li>Dependency and project management with Poetry</li><li>Pre-commit hooks, black, isort, ruff / flake8</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">1.7</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Concurrency</span><h3 class="tl-topic">Async Python</h3></div><ul class="tl-subs"><li>Event loop, coroutines, async / await</li><li>asyncio tasks, gather and timeouts</li><li>Concurrency vs parallelism; threads vs processes</li><li>Async HTTP calls with httpx</li><li>Common async pitfalls and debugging</li></ul></div></div>
+  
+
+      </div>
+    </div>
+
+    <!-- Module 02 -->
+    <div class="syl-section">
+      <div class="sec-hdr" style="background:linear-gradient(135deg,#38bdf8,#6366f1)">
+        <div class="sec-hdr-ico">🗄️</div>
+        <div class="sec-hdr-info"><h2>Module 02 · Backend &amp; Databases</h2><p>6 submodules</p></div>
+      </div>
+      <div class="timeline">
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">2.1</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">API Design</span><h3 class="tl-topic">REST API Design</h3></div><ul class="tl-subs"><li>Resources, verbs, status codes and idempotency</li><li>Request / response modelling and pagination</li><li>Error contracts and API versioning</li><li>Clean layering: router, service, repository</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">2.2</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Framework</span><h3 class="tl-topic">FastAPI</h3></div><ul class="tl-subs"><li>Routing, path and query parameters, dependencies</li><li>Pydantic models, validation and serialisation</li><li>Middleware, CORS and exception handlers</li><li>OpenAPI / Swagger documentation</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">2.3</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Auth</span><h3 class="tl-topic">Authentication</h3></div><ul class="tl-subs"><li>Password hashing and credential storage</li><li>JWT access and refresh tokens</li><li>Role-based access control and route guards</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">2.4</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">SQL</span><h3 class="tl-topic">SQL Databases (PostgreSQL)</h3></div><ul class="tl-subs"><li>Tables, keys and relationships</li><li>SELECT, JOIN, GROUP BY and aggregate queries</li><li>Indexes and reading a query plan</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">2.5</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">NoSQL &amp; Cache</span><h3 class="tl-topic">NoSQL &amp; Caching</h3></div><ul class="tl-subs"><li>MongoDB documents, collections and CRUD</li><li>When to choose a document store over SQL</li><li>Redis caching, TTL and cache invalidation</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">2.6</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Persistence</span><h3 class="tl-topic">ORM, Migrations &amp; Testing</h3></div><ul class="tl-subs"><li>SQLAlchemy models, sessions and relationships</li><li>Alembic migrations and rollback</li><li>Integration tests over a real database</li></ul></div></div>
+   
+  
+
+      </div>
+    </div>
+
+    <!-- Module 03 -->
+    <div class="syl-section">
+      <div class="sec-hdr" style="background:linear-gradient(135deg,#f472b6,#a855f7)">
+        <div class="sec-hdr-ico">🤖</div>
+        <div class="sec-hdr-info"><h2>Module 03 · Generative AI &amp; LLM Foundations</h2><p>6 submodules</p></div>
+      </div>
+      <div class="timeline">
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">3.1</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Landscape</span><h3 class="tl-topic">The Generative AI Landscape</h3></div><ul class="tl-subs"><li>Predictive vs generative AI; what changed and why</li><li>Model families: text, embedding, vision, audio, multimodal</li><li>Open vs closed models; hosted vs self-hosted</li><li>Where generative AI creates real business value</li><li>Build vs buy vs fine-tune decision framing</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">3.2</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Internals</span><h3 class="tl-topic">How LLMs Work</h3></div><ul class="tl-subs"><li>Neural network and machine learning basics</li><li>Transformer architecture and attention (conceptual)</li><li>Training, pre-training, instruction tuning and RLHF</li><li>Base vs instruction-tuned vs reasoning models</li><li>Why models hallucinate; typical failure modes</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">3.3</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Context</span><h3 class="tl-topic">Tokens, Context &amp; Sampling</h3></div><ul class="tl-subs"><li>Tokenisation and token accounting</li><li>Context windows, truncation and context management</li><li>Temperature, top-p, max tokens and stop sequences</li><li>Determinism, seeds and reproducibility limits</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">3.4</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Embeddings</span><h3 class="tl-topic">Embeddings &amp; Similarity</h3></div><ul class="tl-subs"><li>What an embedding represents</li><li>Cosine, dot-product and Euclidean similarity</li><li>Embedding models and dimensionality</li><li>Use cases: search, clustering, deduplication, classification</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">3.5</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Provider APIs</span><h3 class="tl-topic">Working with Provider APIs</h3></div><ul class="tl-subs"><li>OpenAI API: chat completions, embeddings, files</li><li>Anthropic Claude API: messages, system prompts, tools</li><li>Google Gemini API: multimodal requests</li><li>Amazon Bedrock: model access and invocation</li><li>Keys, quotas, retries, backoff and error handling</li><li>Streaming responses and token-by-token UX</li><li>Provider abstraction for vendor-neutral design</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">3.6</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Cost &amp; Latency</span><h3 class="tl-topic">Model Selection, Cost &amp; Latency</h3></div><ul class="tl-subs"><li>Matching model capability to the task</li><li>Benchmarks and their limits; running your own tests</li><li>Token pricing, cost per request and budget tracking</li><li>Latency budgets, batching and caching strategies</li></ul></div></div>
+   
+
+      </div>
+    </div>
+
+    <!-- Module 04 -->
+    <div class="syl-section">
+      <div class="sec-hdr" style="background:linear-gradient(135deg,#fb7185,#c084fc)">
+        <div class="sec-hdr-ico">✍️</div>
+        <div class="sec-hdr-info"><h2>Module 04 · Prompt Engineering &amp; LLM Applications</h2><p>6 submodules</p></div>
+      </div>
+      <div class="timeline">
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">4.1</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Fundamentals</span><h3 class="tl-topic">Prompt Fundamentals</h3></div><ul class="tl-subs"><li>System, user and assistant roles</li><li>Instruction clarity, delimiters and formatting rules</li><li>Zero-shot vs few-shot prompting</li><li>Output contracts and refusal handling</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">4.2</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Advanced</span><h3 class="tl-topic">Advanced Prompting Techniques</h3></div><ul class="tl-subs"><li>Chain-of-thought and step-by-step reasoning</li><li>Self-consistency and multi-sample voting</li><li>Role, persona and constraint prompting</li><li>Decomposition and prompt chaining</li><li>Context compression and summarisation prompts</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">4.3</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Tool Calling</span><h3 class="tl-topic">Function / Tool Calling &amp; Structured Output</h3></div><ul class="tl-subs"><li>Tool schemas and argument validation</li><li>JSON mode and schema-constrained responses</li><li>Parsing, repairing and validating model output</li><li>Mapping model output onto typed Python models</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">4.4</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Prompt Ops</span><h3 class="tl-topic">Prompt Templates, Versioning &amp; Testing</h3></div><ul class="tl-subs"><li>Template design and variable injection</li><li>Versioning prompts alongside code</li><li>Regression tests for prompt changes</li><li>Golden datasets and snapshot comparison</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">4.5</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Eval &amp; Guardrails</span><h3 class="tl-topic">Evaluation &amp; Guardrails</h3></div><ul class="tl-subs"><li>Offline evaluation and scoring rubrics</li><li>LLM-as-judge and human review loops</li><li>Input / output filtering and content safety</li><li>Prompt-injection awareness at the application layer</li><li>Monitoring quality in production</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">4.6</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Multimodal</span><h3 class="tl-topic">Multimodal &amp; Customisation</h3></div><ul class="tl-subs"><li>Vision, document and audio inputs</li><li>Prompting vs RAG vs fine-tuning: choosing correctly</li><li>Fine-tuning and distillation at an awareness level</li><li>Cost and maintenance trade-offs of each approach</li></ul></div></div>
+      
+
+      </div>
+    </div>
+
+    <!-- Module 05 -->
+    <div class="syl-section">
+      <div class="sec-hdr" style="background:linear-gradient(135deg,#c084fc,#6366f1)">
+        <div class="sec-hdr-ico">📚</div>
+        <div class="sec-hdr-info"><h2>Module 05 · Retrieval-Augmented Generation (RAG)</h2><p>6 submodules</p></div>
+      </div>
+      <div class="timeline">
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">5.1</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Architecture</span><h3 class="tl-topic">RAG Architecture</h3></div><ul class="tl-subs"><li>Why retrieval beats fine-tuning for private data</li><li>Ingest, index, retrieve, augment, generate pipeline</li><li>Failure modes: missing context, wrong chunk, stale index</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">5.2</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Ingestion</span><h3 class="tl-topic">Document Ingestion &amp; Chunking</h3></div><ul class="tl-subs"><li>Loaders for PDF, DOCX, HTML, Markdown and databases</li><li>Fixed-size, recursive and semantic chunking</li><li>Chunk overlap, metadata and document hierarchy</li><li>Incremental re-indexing, updates and deletion</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">5.3</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Vector DBs</span><h3 class="tl-topic">Vector Databases</h3></div><ul class="tl-subs"><li>Pinecone: indexes, namespaces, upserts, filters</li><li>Chroma and FAISS for local and self-hosted use</li><li>pgvector as a SQL-native option</li><li>Index sizing, cost and refresh strategy</li><li>OpenSearch / managed vector options on AWS</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">5.4</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Retrieval Quality</span><h3 class="tl-topic">Retrieval Quality</h3></div><ul class="tl-subs"><li>Semantic, keyword (BM25) and hybrid search</li><li>Metadata filtering and access-scoped retrieval</li><li>Re-ranking with cross-encoders</li><li>Query rewriting, expansion and multi-query retrieval</li><li>Parent-document and small-to-big retrieval</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">5.5</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Frameworks</span><h3 class="tl-topic">Frameworks</h3></div><ul class="tl-subs"><li>LangChain: chains, runnables, retrievers, memory</li><li>LlamaIndex: indices, query engines, node post-processors</li><li>Managed RAG (Bedrock Knowledge Bases) vs custom</li><li>When to drop the framework and write it directly</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">5.6</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Grounding</span><h3 class="tl-topic">Grounding &amp; RAG Evaluation</h3></div><ul class="tl-subs"><li>Citations, source attribution and traceability</li><li>Refusing to answer when context is insufficient</li><li>Metrics: context precision / recall, faithfulness</li><li>RAGAS-style evaluation harness wired into CI</li></ul></div></div>
+    
+
+      </div>
+    </div>
+
+    <!-- Module 06 -->
+    <div class="syl-section">
+      <div class="sec-hdr" style="background:linear-gradient(135deg,#a855f7,#22d3ee)">
+        <div class="sec-hdr-ico">🕹️</div>
+        <div class="sec-hdr-info"><h2>Module 06 · Agentic AI</h2><p>9 submodules</p></div>
+      </div>
+      <div class="timeline">
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">6.1</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Fundamentals</span><h3 class="tl-topic">Agent Fundamentals</h3></div><ul class="tl-subs"><li>Agent vs chain vs workflow</li><li>The reason-act loop and tool use</li><li>Autonomy levels and where to draw the line</li><li>Deciding when an agent is the wrong answer</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">6.2</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Tools</span><h3 class="tl-topic">Tool Calling &amp; Integrations</h3></div><ul class="tl-subs"><li>Designing safe, idempotent, well-described tools</li><li>Tool schemas, validation and error surfaces</li><li>Calling internal APIs, databases, search and files</li><li>Least-privilege credentials per tool</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">6.3</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">MCP</span><h3 class="tl-topic">Model Context Protocol (MCP)</h3></div><ul class="tl-subs"><li>MCP architecture: hosts, clients and servers</li><li>Tools, resources and prompts over MCP</li><li>Building a custom MCP server for internal systems</li><li>Connecting MCP servers to agent runtimes and IDEs</li><li>Transport, auth and deployment considerations</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">6.4</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Memory</span><h3 class="tl-topic">Memory &amp; State</h3></div><ul class="tl-subs"><li>Short-term conversation state and windowing</li><li>Long-term memory stores and retrieval of past context</li><li>Summarisation and context compaction</li><li>Durable state machines and resumable runs</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">6.5</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Reasoning</span><h3 class="tl-topic">Planning, Reasoning &amp; Reflection</h3></div><ul class="tl-subs"><li>Task decomposition and planner / executor split</li><li>ReAct, plan-and-execute and tree-of-thought patterns</li><li>Self-critique, retries and reflection loops</li><li>Budget and step limits to prevent runaway loops</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">6.6</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Multi-Agent</span><h3 class="tl-topic">Multi-Agent Systems</h3></div><ul class="tl-subs"><li>Supervisor and specialist topologies</li><li>Handoffs, shared scratchpads and message passing</li><li>Parallel fan-out and result aggregation</li><li>Failure isolation between agents</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">6.7</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Frameworks</span><h3 class="tl-topic">Agent Frameworks</h3></div><ul class="tl-subs"><li>LangGraph: graphs, state, checkpoints, human interrupts</li><li>CrewAI: roles, tasks and crews</li><li>Amazon Bedrock Agents at an awareness level</li><li>Choosing a framework, or writing the loop yourself</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">6.8</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Safety &amp; HITL</span><h3 class="tl-topic">Safety, Human-in-the-Loop &amp; Observability</h3></div><ul class="tl-subs"><li>Approval gates for write and irreversible actions</li><li>Sandboxing, allow-lists and spend limits</li><li>Tracing runs, spans and tool calls</li><li>Debugging non-deterministic behaviour</li><li>Audit trails for agent actions</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">6.9</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Production</span><h3 class="tl-topic">Agent Evaluation &amp; Production Readiness</h3></div><ul class="tl-subs"><li>Task-success metrics instead of vibes</li><li>Regression suites for agent behaviour</li><li>Cost, latency and step-count monitoring</li><li>Rollout strategy: shadow mode to full autonomy</li></ul></div></div>
+   
+
+
+      </div>
+    </div>
+
+    <!-- Module 07 -->
+    <div class="syl-section">
+      <div class="sec-hdr" style="background:linear-gradient(135deg,#fbbf24,#f97316)">
+        <div class="sec-hdr-ico">☁️</div>
+        <div class="sec-hdr-info"><h2>Module 07 · Cloud, AWS &amp; Security</h2><p>23 submodules — Linux and networking, AWS core services, cloud security and system design</p></div>
+      </div>
+      <div class="timeline">
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.1</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Linux</span><h3 class="tl-topic">Linux Command Line</h3></div><ul class="tl-subs"><li>Filesystem hierarchy, navigation and file operations</li><li>Text processing: grep, sed, awk, cut, sort, jq</li><li>Processes, signals, top / htop, ps and kill</li><li>Disk, memory and CPU inspection (df, du, free, iostat)</li><li>Package management (apt / yum) and systemd services</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.2</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Linux</span><h3 class="tl-topic">Users, Permissions &amp; Hardening</h3></div><ul class="tl-subs"><li>Users, groups, sudo and least privilege</li><li>File permissions, ownership, umask, ACLs</li><li>SSH keys, config and disabling password login</li><li>Firewall basics (ufw / iptables) and fail2ban</li><li>Log locations, journalctl and log rotation</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.3</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Scripting</span><h3 class="tl-topic">Bash Scripting</h3></div><ul class="tl-subs"><li>Variables, conditionals, loops and functions</li><li>Arguments, exit codes and set -euo pipefail</li><li>Pipes, redirection and process substitution</li><li>cron and scheduled maintenance scripts</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.4</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Networking</span><h3 class="tl-topic">Networking Fundamentals</h3></div><ul class="tl-subs"><li>OSI / TCP-IP model, ports and sockets</li><li>IP addressing, subnets, CIDR, NAT and routing</li><li>DNS records, resolution path and propagation</li><li>HTTP/1.1 vs HTTP/2, headers, methods, caching</li><li>TLS handshake, certificates and Let's Encrypt</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.5</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Nginx</span><h3 class="tl-topic">Nginx &amp; Traffic Handling</h3></div><ul class="tl-subs"><li>Reverse proxy and upstream configuration</li><li>TLS termination and HTTP to HTTPS redirects</li><li>Load balancing methods and health checks</li><li>Static assets, gzip, timeouts and rate limiting</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.6</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Cloud Basics</span><h3 class="tl-topic">Cloud Foundations</h3></div><ul class="tl-subs"><li>IaaS, PaaS, SaaS and serverless models</li><li>Regions, availability zones and edge locations</li><li>The shared responsibility model</li><li>Console, CLI, SDK (boto3) and CloudShell</li><li>AWS, Azure and GCP service mapping</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.7</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Troubleshooting</span><h3 class="tl-topic">Troubleshooting Playbook</h3></div><ul class="tl-subs"><li>curl, dig, nslookup, traceroute, ss, netstat, tcpdump</li><li>Diagnosing connection refused, timeout, 502 and 504</li><li>Certificate, DNS and firewall failure patterns</li><li>A repeatable triage checklist for customer servers</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.8</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">AWS</span><h3 class="tl-topic">Accounts &amp; Access Basics</h3></div><ul class="tl-subs"><li>Account structure, Organizations and landing zones</li><li>Root account protection and billing alarms</li><li>Tagging strategy and resource naming</li><li>Service quotas and regional availability</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.9</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">AWS</span><h3 class="tl-topic">Compute</h3></div><ul class="tl-subs"><li>EC2 instance families, AMIs, user data, key pairs</li><li>Elastic IPs, EBS volumes and snapshots</li><li>Auto Scaling groups, launch templates, scaling policies</li><li>Application Load Balancer, target groups, health checks</li><li>ECS and EKS as container platforms (introduction)</li><li>Right-sizing, reserved capacity and spot instances</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.10</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">AWS</span><h3 class="tl-topic">Networking</h3></div><ul class="tl-subs"><li>VPC design, public and private subnets</li><li>Route tables, internet and NAT gateways</li><li>Security groups vs network ACLs</li><li>VPC endpoints and private service access</li><li>Route 53 hosted zones, records and routing policies</li><li>CloudFront distributions and caching behaviour</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.11</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">AWS</span><h3 class="tl-topic">Storage &amp; Databases</h3></div><ul class="tl-subs"><li>S3 buckets, storage classes, lifecycle, versioning</li><li>S3 access control, presigned URLs and static hosting</li><li>RDS: engines, parameter groups, backups, read replicas</li><li>Multi-AZ vs read replica; failover behaviour</li><li>DynamoDB: partition keys, indexes, capacity modes</li><li>ElastiCache for Redis</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.12</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">AWS</span><h3 class="tl-topic">Serverless &amp; Integration</h3></div><ul class="tl-subs"><li>Lambda: handlers, packaging, layers, limits, cold starts</li><li>API Gateway: REST and HTTP APIs, authorisers, stages</li><li>EventBridge, SQS queues and SNS topics</li><li>Step Functions for orchestration</li><li>Event-driven serverless patterns</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.13</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">AWS AI</span><h3 class="tl-topic">AI &amp; Data Services</h3></div><ul class="tl-subs"><li>Amazon Bedrock: model access, invocation, guardrails</li><li>Bedrock Knowledge Bases and managed RAG</li><li>OpenSearch and vector search options</li><li>SageMaker at an awareness level</li><li>Managed AI services vs self-hosted trade-offs</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.14</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">AWS</span><h3 class="tl-topic">Observability &amp; Cost Management</h3></div><ul class="tl-subs"><li>CloudWatch metrics, logs, alarms and dashboards</li><li>CloudTrail auditing and Config drift detection</li><li>Pricing models, budgets and Cost Explorer</li><li>Savings plans, right-sizing and waste hunting</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.15</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Security</span><h3 class="tl-topic">IAM in Depth</h3></div><ul class="tl-subs"><li>Users, groups, roles and instance profiles</li><li>Policy documents, conditions and permission boundaries</li><li>Least privilege, access analyser and credential hygiene</li><li>Cross-account access, federation and IRSA for Kubernetes</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.16</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Security</span><h3 class="tl-topic">Secrets, Keys &amp; Encryption</h3></div><ul class="tl-subs"><li>Removing secrets from code, images and repos</li><li>AWS Secrets Manager and SSM Parameter Store</li><li>KMS, envelope encryption and key rotation</li><li>Encryption at rest and in transit; TLS everywhere</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.17</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">AppSec</span><h3 class="tl-topic">Application &amp; API Security</h3></div><ul class="tl-subs"><li>OWASP Top 10 with concrete Python examples</li><li>Injection, SSRF, IDOR and broken access control</li><li>OAuth 2.0 misuse and JWT hardening</li><li>Security headers, CORS and cookie flags</li><li>Dependency and container vulnerability scanning</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.18</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">AI Security</span><h3 class="tl-topic">LLM &amp; Agent Security</h3></div><ul class="tl-subs"><li>Prompt injection: direct and indirect</li><li>Data exfiltration through tools and retrieved content</li><li>Output sanitisation and untrusted-content boundaries</li><li>Tool permission scoping and approval gates</li><li>OWASP Top 10 for LLM applications</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.19</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Compliance</span><h3 class="tl-topic">Audit, Compliance &amp; Review Readiness</h3></div><ul class="tl-subs"><li>Audit logging and tamper-evident trails</li><li>SOC 2, ISO 27001, GDPR / DPDP awareness</li><li>Threat modelling with STRIDE</li><li>Answering a customer security questionnaire</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.20</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">System Design</span><h3 class="tl-topic">Scalability &amp; Architecture Patterns</h3></div><ul class="tl-subs"><li>Requirements, constraints and capacity estimation</li><li>Latency, throughput, availability and consistency</li><li>Monolith, modular monolith and microservices</li><li>Service boundaries and API contracts</li><li>Vertical vs horizontal scaling; stateless design</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.21</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Messaging</span><h3 class="tl-topic">Messaging &amp; Event-Driven Design</h3></div><ul class="tl-subs"><li>Queues vs topics vs streams</li><li>Apache Kafka: topics, partitions, consumer groups, offsets</li><li>RabbitMQ: exchanges, routing keys, dead-letter queues</li><li>Idempotency, ordering and delivery guarantees</li><li>Outbox pattern and event schema evolution</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.22</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Reliability</span><h3 class="tl-topic">Reliability &amp; Protection Patterns</h3></div><ul class="tl-subs"><li>Caching layers and invalidation strategies</li><li>Read replicas, sharding and partitioning</li><li>High availability, redundancy and failover</li><li>Rate limiting, throttling and backpressure</li><li>Timeouts, retries with jitter and circuit breakers</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">7.23</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">AI at Scale</span><h3 class="tl-topic">Designing Multi-Tenant AI Systems</h3></div><ul class="tl-subs"><li>Tenant isolation models and data separation</li><li>Model gateway, queueing and quota management</li><li>Streaming at scale and cost per request</li><li>Well-Architected Framework: all six pillars</li><li>Writing and defending an architecture decision record</li></ul></div></div>
+     
+
+      </div>
+    </div>
+
+    <!-- Module 08 -->
+    <div class="syl-section">
+      <div class="sec-hdr" style="background:linear-gradient(135deg,#34d399,#22d3ee)">
+        <div class="sec-hdr-ico">⚙️</div>
+        <div class="sec-hdr-info"><h2>Module 08 · DevOps &amp; Production</h2><p>13 submodules — containers, Kubernetes, IaC, CI/CD, GitOps and production operations</p></div>
+      </div>
+      <div class="timeline">
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.1</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Docker</span><h3 class="tl-topic">Containers with Docker</h3></div><ul class="tl-subs"><li>Images, layers, containers and the build cache</li><li>Dockerfile best practice: multi-stage, non-root, slim bases</li><li>Volumes, networks, environment and runtime secrets</li><li>Docker Compose for multi-service local stacks</li><li>Registries: Docker Hub and Amazon ECR</li><li>Image scanning, signing and size reduction</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.2</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Kubernetes</span><h3 class="tl-topic">Kubernetes Core</h3></div><ul class="tl-subs"><li>Architecture: control plane, nodes, kubelet, etcd</li><li>Pods, ReplicaSets, Deployments and rollouts</li><li>Services, Ingress controllers and cluster DNS</li><li>ConfigMaps, Secrets and environment configuration</li><li>Namespaces, resource requests, limits and quotas</li><li>Liveness, readiness and startup probes</li><li>kubectl workflow and cluster debugging</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.3</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Kubernetes</span><h3 class="tl-topic">Kubernetes in Production</h3></div><ul class="tl-subs"><li>StatefulSets, Jobs and CronJobs</li><li>Horizontal Pod Autoscaler and Cluster Autoscaler</li><li>RBAC, service accounts and pod security</li><li>EKS on AWS: node groups, IRSA, add-ons</li><li>Persistent volumes and storage classes</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.4</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Helm</span><h3 class="tl-topic">Helm &amp; Configuration Management</h3></div><ul class="tl-subs"><li>Chart structure, templates, values and helpers</li><li>Releases, upgrades, rollbacks and hooks</li><li>Environment-specific values and chart reuse</li><li>Publishing an internal chart repository</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.5</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Terraform</span><h3 class="tl-topic">Infrastructure as Code with Terraform</h3></div><ul class="tl-subs"><li>Providers, resources, variables, outputs, locals</li><li>State, remote backends and state locking</li><li>Modules, composition and reusable stacks</li><li>Workspaces and multi-environment layout</li><li>plan / apply / destroy discipline and drift handling</li><li>Importing existing infrastructure; CloudFormation awareness</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.6</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">CI/CD</span><h3 class="tl-topic">CI/CD Pipelines</h3></div><ul class="tl-subs"><li>Pipeline stages: build, test, scan, package, deploy</li><li>GitHub Actions: workflows, jobs, matrices, caching</li><li>Reusable workflows, self-hosted runners, OIDC to AWS</li><li>Secrets and least-privilege credentials in pipelines</li><li>Jenkins and GitLab CI at an awareness level</li><li>Artefact versioning and immutable builds</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.7</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">GitOps</span><h3 class="tl-topic">GitOps &amp; Release Strategy</h3></div><ul class="tl-subs"><li>GitOps principles and the pull-based model</li><li>ArgoCD: applications, sync, drift detection, self-heal</li><li>Environment promotion: dev to staging to production</li><li>Trunk-based development and feature flags</li><li>Rollback and hotfix procedures</li><li>Change management on a customer's cluster</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.8</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Go Live</span><h3 class="tl-topic">Going Live</h3></div><ul class="tl-subs"><li>Production readiness checklist</li><li>Configuration, feature flags and environment parity</li><li>Zero-downtime deployment: rolling, blue-green, canary</li><li>Database migrations without downtime</li><li>Load testing with k6 / Locust and autoscaling validation</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.9</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Monitoring</span><h3 class="tl-topic">Monitoring &amp; Metrics</h3></div><ul class="tl-subs"><li>The four golden signals and RED / USE methods</li><li>Prometheus: exporters, scraping, PromQL, recording rules</li><li>Instrumenting a Python service with custom metrics</li><li>Grafana dashboards for service, infra and LLM cost</li><li>Tracking token spend, latency and model error rates</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.10</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Observability</span><h3 class="tl-topic">Logging &amp; Tracing</h3></div><ul class="tl-subs"><li>Structured JSON logging and correlation IDs</li><li>ELK / OpenSearch: ingest, index patterns, queries</li><li>Log levels, sampling, retention and PII redaction</li><li>Distributed tracing with OpenTelemetry</li><li>Tracing LLM and agent calls end to end</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.11</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Incidents</span><h3 class="tl-topic">Alerting &amp; Incident Response</h3></div><ul class="tl-subs"><li>Alertmanager routing, grouping, silences, escalation</li><li>Alerting on symptoms, not causes; avoiding fatigue</li><li>On-call rotation, severity levels and comms templates</li><li>Incident timeline, mitigation and blameless postmortems</li><li>Writing runbooks a customer's team can follow</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.12</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">SRE &amp; Cost</span><h3 class="tl-topic">Reliability &amp; Cost Operations</h3></div><ul class="tl-subs"><li>SLI, SLO and error budgets</li><li>Capacity planning and performance regression tracking</li><li>Backup, restore drills and disaster recovery</li><li>Cloud and token cost review; optimisation levers</li></ul></div></div>
+<div class="tl-step"><div class="tl-marker"><span class="tl-num">8.13</span></div><div class="tl-card"><div class="tl-head"><span class="mod-tag">Customer Facing</span><h3 class="tl-topic">Handover &amp; Customer Operations</h3></div><ul class="tl-subs"><li>Architecture and operations documentation</li><li>Training the customer's team; knowledge transfer</li><li>Support model, escalation paths and SLAs</li><li>Feeding customer learnings back into the product</li></ul></div></div>
+    
+
+      </div>
+    </div>
+
+
+  </div>
+  <footer>
+    <div class="foot-brand">Multi Cloud DevOps FDE by veera sir NareshIT</div>
+    <ul class="foot-links">
+      <li><a href="aws.html">☁️ AWS</a></li>
+      <li><a href="azure.html">🔷 Azure</a></li>
+      <li><a href="gcp.html">🌐 GCP</a></li>
+      <li><a href="devops.html">⚙️ DevOps</a></li>
+      <li><a href="fde.html">🎯 FDE</a></li>
+      <li><a href="reviews.html">🌟 Reviews</a></li>
+      <li><a href="projects.html">🚀 Projects</a></li>
+    </ul>
+    <div class="foot-copy">© 2026 · Trainer: veera sir — NareshIT</div>
+  </footer>
+</div>
+
+<script src="../assets/logos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.12.0/tsparticles.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="../assets/app.js"></script>
+<script>
+  document.querySelectorAll('img[data-logo]').forEach(img => {
+    const key = img.getAttribute('data-logo');
+    if (window.LOGOS && window.LOGOS[key]) img.src = window.LOGOS[key];
+  });
+
+  /* give the 8 module sections anchor ids (#m1..#m8) for the quick-nav + accents */
+  document.querySelectorAll('#page-fde .syl-main > .syl-section').forEach((sec, i) => {
+    if (i < 8) sec.id = 'm' + (i + 1);
+  });
+</script>
+</body>
+</html>

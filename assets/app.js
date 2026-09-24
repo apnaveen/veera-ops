@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'page-gcp':      ['gcp','kubernetes','docker','gitlab','terraform','nodejs'],
     'page-devops':   ['docker','kubernetes','jenkins','terraform','ansible','grafana','prometheus','git'],
     'page-genai':    ['openai','python','langchain','huggingface','pinecone','tensorflow','pytorch','docker'],
+    'page-fde':      ['python','openai','langchain','docker','kubernetes','terraform','aws','pinecone'],
     'page-reviews':  ['aws','docker','kubernetes','python','terraform','jenkins'],
     'page-projects': ['aws','azure','gcp','docker','kubernetes','jenkins','terraform','nginx']
   };
@@ -168,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'page-gcp':      ['#34A853','#4285F4'],
     'page-devops':   ['#38ef7d','#00c6ff'],
     'page-genai':    ['#f5576c','#8e54e9'],
+    'page-fde':      ['#22d3ee','#818cf8','#22c55e'],
     'page-reviews':  ['#fbbf24','#f472b6'],
     'page-projects': ['#ff5e62','#00c6ff']
   };
@@ -195,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function particleConfig(id){
     const cols = pageColors[id] || pageColors['home'];
     const logos = logoSets[id] || logoSets['home'];
-    const speeds = { 'page-aws':1.3, 'page-devops':1.5, 'page-projects':1.8, 'page-genai':0.8, 'page-reviews':0.7 };
+    const speeds = { 'page-aws':1.3, 'page-devops':1.5, 'page-projects':1.8, 'page-genai':0.8, 'page-fde':0.9, 'page-reviews':0.7 };
     return {
       fpsLimit: 60,
       fullScreen: { enable: false },
@@ -230,7 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---- 1.5 Command rain — falling commands (DevOps & GenAI pages) ---- */
   const rainWords = {
     'page-devops': ['kubectl get pods','docker build .','terraform apply','git push','helm install','ansible-playbook','docker ps','kubectl apply','git merge','jenkins build','argocd sync','docker push'],
-    'page-genai':  ['import torch','model.fit()','01011010','pip install openai','agent.run()','predict()','tensor.cuda()','loss.backward()','01101001','copilot >>','train(model)','llm.invoke()']
+    'page-genai':  ['import torch','model.fit()','01011010','pip install openai','agent.run()','predict()','tensor.cuda()','loss.backward()','01101001','copilot >>','train(model)','llm.invoke()'],
+    'page-fde':    ['uvicorn app:app','pytest -q','llm.invoke()','agent.run()','retriever.search()','kubectl apply -f','terraform apply','docker build .','argocd sync','mcp.serve()','pydantic.BaseModel','SELECT * FROM','redis.get(key)','promql: rate()']
   };
   (function startRain(){
     if (reduced || isMobile || !rainWords[pid]) return;
